@@ -14,5 +14,6 @@ public:
 private:
     void Func1();
     void Func2();
+    void Func3();
     Ui::QmlDemoClass ui;
 };

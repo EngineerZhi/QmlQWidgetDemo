@@ -43,6 +43,9 @@
     <ClCompile Include="QmlControl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="QTestData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="register_type_qml.qml">
@@ -52,9 +55,15 @@
     <None Include="set_context_qml.qml">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="signal_qml.qml">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QmlControl.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QTestData.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

@@ -85,6 +85,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="QTestData.cpp" />
     <QtRcc Include="QmlDemo.qrc" />
     <QtUic Include="QmlDemo.ui" />
     <QtMoc Include="QmlDemo.h" />
@@ -96,9 +97,13 @@
     <None Include="cpp.hint" />
     <None Include="set_context_qml.qml" />
     <None Include="register_type_qml.qml" />
+    <None Include="signal_qml.qml" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QmlControl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="QTestData.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

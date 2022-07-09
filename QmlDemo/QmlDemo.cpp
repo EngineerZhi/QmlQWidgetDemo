@@ -6,11 +6,15 @@
 #include <QQuickWidget>
 
 #include "QmlControl.h"
+#include "QTestData.h"
 QmlControl qml_control;
 QmlDemo::QmlDemo(QWidget *parent) : QWidget(parent) {
   ui.setupUi(this);
   // Func2();
-  Func1();
+  //Func1();
+  Func3();
+  //QTestData data;
+  //data.name = "2022";
 }
 
 QmlDemo::~QmlDemo() {}
@@ -42,6 +46,15 @@ void QmlDemo::Func2() {
 
   qml_widget->setResizeMode(QQuickWidget::SizeRootObjectToView);
   qml_widget->setSource(QUrl("set_context_qml.qml"));
+  qml_widget->show();
+  ui.verticalLayout->addWidget(qml_widget);
+}
+
+void QmlDemo::Func3() {
+  qmlRegisterType<QTestData>("test.conrtrol", 1, 1, "CppTestData");
+  QQuickWidget *qml_widget = new QQuickWidget();
+  qml_widget->setResizeMode(QQuickWidget::SizeRootObjectToView);
+  qml_widget->setSource(QUrl("signal_qml.qml"));
   qml_widget->show();
   ui.verticalLayout->addWidget(qml_widget);
 }
