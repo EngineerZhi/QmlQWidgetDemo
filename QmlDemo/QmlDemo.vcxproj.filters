@@ -58,6 +58,9 @@
     <None Include="signal_qml.qml">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="cpp_to_qml.qml">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QmlControl.h">

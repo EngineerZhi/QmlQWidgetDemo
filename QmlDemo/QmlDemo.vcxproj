@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
+    <None Include="cpp_to_qml.qml" />
     <None Include="set_context_qml.qml" />
     <None Include="register_type_qml.qml" />
     <None Include="signal_qml.qml" />

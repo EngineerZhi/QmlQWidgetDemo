@@ -1,23 +1,37 @@
 #include "QmlDemo.h"
-
-#include <QQmlApplicationEngine>
-#include <QQmlContext>
-#include <QQuickView>
-#include <QQuickWidget>
-
-#include "QmlControl.h"
+#include<qobject>
 #include "QTestData.h"
+#include "QmlControl.h"
 QmlControl qml_control;
 QmlDemo::QmlDemo(QWidget *parent) : QWidget(parent) {
   ui.setupUi(this);
   // Func2();
-  //Func1();
-  Func3();
-  //QTestData data;
-  //data.name = "2022";
+  // Func1();
+  // Func3();
+  Func4();
 }
 
 QmlDemo::~QmlDemo() {}
+
+void QmlDemo::on_btn_left_clicked() {
+  auto obj_image =
+    cpp_qml_widget_->rootObject()->findChild<QObject *>("image_test_obj");
+  QMetaObject::invokeMethod(
+     obj_image, "updateSource",
+      Q_ARG(QVariant,
+           QString("http://image.nbd.com.cn/uploads/articles/images/673466/500352700_banner.jpg")));
+
+  QMetaObject::invokeMethod(
+      obj_image, "updateSay", Q_ARG(QVariant, 50));
+
+}
+void QmlDemo::on_btn_right_clicked() {
+  auto obj_image = cpp_qml_widget_->rootObject()->findChild<QObject *>("image_test_obj");
+  obj_image->setProperty(
+      "source",
+      "http://image.nbd.com.cn/uploads/articles/images/673466/500352700_banner.jpg");
+  auto enable_see= obj_image->property("enable_see").toInt();
+}
 
 void QmlDemo::Func1() {
   /*
@@ -57,4 +71,15 @@ void QmlDemo::Func3() {
   qml_widget->setSource(QUrl("signal_qml.qml"));
   qml_widget->show();
   ui.verticalLayout->addWidget(qml_widget);
+}
+
+void QmlDemo::Func4() {
+  engine_ = new QQmlApplicationEngine();
+  //QQuickWidget *qml_widget = new QQuickWidget(engine,nullptr);
+  cpp_qml_widget_ = new QQuickWidget(engine_, nullptr);
+  cpp_qml_widget_->setResizeMode(QQuickWidget::SizeRootObjectToView);
+  cpp_qml_widget_->setSource(QUrl("cpp_to_qml.qml"));
+  cpp_qml_widget_->show();
+  ui.verticalLayout->addWidget(cpp_qml_widget_);
+
 }
