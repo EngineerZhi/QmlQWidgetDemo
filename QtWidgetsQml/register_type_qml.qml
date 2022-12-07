@@ -3,11 +3,13 @@ import QtQuick.Window 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Controls.Styles 1.4
 import test.conrtrol 1.0
+//import test.conrtrol 1.0 as ExampleSingle
 Rectangle {
+    //property int somebee:ExampleSingle.Qmlctrl.addProperty
     color: "gray"
     radius:10
- 	QmlControl {
-       id: qmlctrl
+    QmlControl {
+      id: qmlctrl
     }
     Image {
         id:background_image
@@ -29,8 +31,10 @@ Rectangle {
         }
         //信号槽连接
         onClicked: {
-           	qmlctrl.AddData(99,88);
-            console.log("我被点击了"+text)
+           // somebee=++;
+            //console.log("somebee="+somebee);
+            qmlctrl.AddData(99,88);
+            console.log("我被点击了"+text);
         }
     }
     Button {

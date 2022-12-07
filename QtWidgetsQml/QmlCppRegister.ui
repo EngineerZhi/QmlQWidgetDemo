@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>QmlDemoClass</class>
- <widget class="QWidget" name="QmlDemoClass">
+ <class>QmlCppRegisterClass</class>
+ <widget class="QWidget" name="QmlCppRegisterClass">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,9 +11,9 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>QmlDemo</string>
+   <string>QmlCppRegister</string>
   </property>
-  <layout class="QVBoxLayout" name="main_layout">
+  <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <widget class="QWidget" name="widget" native="true">
      <layout class="QVBoxLayout" name="verticalLayout"/>
@@ -40,28 +40,12 @@
       <property name="bottomMargin">
        <number>0</number>
       </property>
-      <item>
-       <widget class="QPushButton" name="btn_left">
-        <property name="text">
-         <string>widget_left</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="btn_right">
-        <property name="text">
-         <string>widget_right</string>
-        </property>
-       </widget>
-      </item>
      </layout>
     </widget>
    </item>
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources>
-  <include location="QmlDemo.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

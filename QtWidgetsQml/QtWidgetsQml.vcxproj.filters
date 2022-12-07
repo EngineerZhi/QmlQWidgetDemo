@@ -23,16 +23,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="QmlDemo.qrc">
+    <QtRcc Include="QtWidgetsQml.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
-    <QtUic Include="QmlDemo.ui">
+    <QtUic Include="QtWidgetsQml.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtMoc Include="QmlDemo.h">
+    <QtMoc Include="QtWidgetsQml.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <ClCompile Include="QmlDemo.cpp">
+    <ClCompile Include="QtWidgetsQml.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -40,7 +40,13 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="QmlCppRegister.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="QmlControl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CppCallQml.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="QTestData.cpp">
@@ -48,26 +54,42 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="load_test.qml">
+      <Filter>Resource Files</Filter>
+    </None>
     <None Include="register_type_qml.qml">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="cpp.hint" />
     <None Include="set_context_qml.qml">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="signal_qml.qml">
       <Filter>Resource Files</Filter>
     </None>
     <None Include="cpp_to_qml.qml">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="signal_qml.qml">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="QmlCppRegister.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
     <QtMoc Include="QmlControl.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="CppCallQml.h">
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="QTestData.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="QmlCppRegister.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="CppCallQml.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
   </ItemGroup>
 </Project>

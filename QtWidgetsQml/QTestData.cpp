@@ -2,8 +2,9 @@
 
 #include <QDebug>
 QTestData::QTestData(QObject *parent) : QObject(parent) {
-  connect(this, &QTestData::NameChanged, this, [this](QString name) {
-    qDebug() << "sigNameChanged new_name=" << name;
+connect(this, &QTestData::NameChanged, this, [this](QString name) {
+  qDebug() << "sigNameChanged new_name=" << name;
+    name_ = name;
   });
 }
 

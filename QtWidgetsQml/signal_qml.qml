@@ -51,7 +51,7 @@ Rectangle {
         }
         //信号槽连接
         onClicked: {
-            cpp_data.name="http://image.nbd.com.cn/uploads/articles/images/673466/500352700_banner.jpg"
+            cpp_data.name="http://image.zhangxinxu.com/image/study/s/s256/mm8.jpg"
             console.log("我被点击了"+text)
         }
     }

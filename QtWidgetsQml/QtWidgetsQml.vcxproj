@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{BCF43A0E-D947-4B31-B5C8-59D920A95654}</ProjectGuid>
+    <ProjectGuid>{FA8A0D5B-F33A-4C18-8B6B-5231B0FEE65F}</ProjectGuid>
     <Keyword>QtVS_v304</Keyword>
     <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0.22000.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0.22000.0</WindowsTargetPlatformVersion>
@@ -32,7 +32,7 @@
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
     <QtInstall>msvc2019_64</QtInstall>
-    <QtModules>core;gui;widgets;qml;quickwidgets;quick;quickcontrols2</QtModules>
+    <QtModules>core;gui;network;qml;quick;quickcontrols2;quickwidgets;widgets</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
@@ -85,23 +85,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="QTestData.cpp" />
-    <QtRcc Include="QmlDemo.qrc" />
-    <QtUic Include="QmlDemo.ui" />
-    <QtMoc Include="QmlDemo.h" />
+    <QtRcc Include="QtWidgetsQml.qrc" />
+    <QtUic Include="CppCallQml.ui" />
+    <QtUic Include="QmlCppRegister.ui" />
+    <QtUic Include="QtWidgetsQml.ui" />
+    <QtMoc Include="QtWidgetsQml.h" />
+    <ClCompile Include="CppCallQml.cpp" />
     <ClCompile Include="QmlControl.cpp" />
-    <ClCompile Include="QmlDemo.cpp" />
+    <ClCompile Include="QmlCppRegister.cpp" />
+    <ClCompile Include="QTestData.cpp" />
+    <ClCompile Include="QtWidgetsQml.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="cpp.hint" />
     <None Include="cpp_to_qml.qml" />
-    <None Include="set_context_qml.qml" />
+    <None Include="load_test.qml" />
     <None Include="register_type_qml.qml" />
+    <None Include="set_context_qml.qml" />
     <None Include="signal_qml.qml" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="QmlCppRegister.h" />
+  </ItemGroup>
+  <ItemGroup>
     <QtMoc Include="QmlControl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="CppCallQml.h" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QTestData.h" />
